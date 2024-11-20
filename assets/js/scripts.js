@@ -1,21 +1,12 @@
-// Smooth Scroll for Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
 
-// Navbar Animation on Scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = '#f8f8f8';
-        navbar.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.backgroundColor = 'transparent';
-        navbar.style.boxShadow = 'none';
-    }
+document.body.setAttribute('data-theme', currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
 });
