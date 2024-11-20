@@ -8,8 +8,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #000000; /* Dark background */
+    color: #f5f5f7; /* Light text */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .container {
@@ -18,37 +18,23 @@ body {
     margin: 0 auto;
 }
 
-/* Theme Variables */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --accent-color: #0071e3;
-    --secondary-color: #666;
-}
-[data-theme="dark"] {
-    --bg-color: #000000;
-    --text-color: #ffffff;
-    --accent-color: #007aff;
-    --secondary-color: #999;
-}
-
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-color);
     padding: 1rem 0;
-    border-bottom: 1px solid var(--secondary-color);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    background: #0d0d0d; /* Dark navbar background */
+    border-bottom: 1px solid #333333; /* Subtle border */
 }
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--accent-color);
+    color: #007aff; /* Apple-like blue */
 }
 .navbar ul {
     list-style: none;
@@ -57,30 +43,17 @@ body {
 }
 .navbar a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #f5f5f7;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 .navbar a:hover {
-    color: var(--accent-color);
-}
-
-/* Theme Toggle */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--accent-color);
-    transition: color 0.3s ease;
-}
-.theme-toggle:hover {
-    color: var(--text-color);
+    color: #007aff;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, var(--bg-color), var(--secondary-color));
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Dark gradient */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -91,16 +64,16 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: #f5f5f7;
 }
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--secondary-color);
+    color: #b3b3b3;
 }
 .cta-button {
-    background: var(--accent-color);
-    color: var(--bg-color);
+    background: #007aff;
+    color: #f5f5f7;
     padding: 0.8rem 2rem;
     border-radius: 5px;
     font-size: 1rem;
@@ -108,28 +81,38 @@ body {
     transition: background 0.3s ease;
 }
 .cta-button:hover {
-    background: var(--text-color);
+    background: #005bb5;
 }
 
 /* Content Sections */
 .content-section {
     padding: 4rem 0;
     text-align: center;
+    background-color: #0d0d0d;
 }
 .content-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: #f5f5f7;
 }
 .content-section p {
     font-size: 1.1rem;
-    color: var(--secondary-color);
+    color: #b3b3b3;
+}
+.product {
+    margin-top: 2rem;
+}
+.product h3 {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-bottom: 0.5rem;
 }
 
 /* Footer */
 footer {
-    background: var(--bg-color);
-    color: var(--secondary-color);
+    background: #0d0d0d;
+    color: #b3b3b3;
     text-align: center;
     padding: 1rem 0;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid #333333;
 }
