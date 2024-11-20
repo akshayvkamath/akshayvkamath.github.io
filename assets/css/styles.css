@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0071e3;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar li {
+    margin-left: 2rem;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #0071e3;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #e5e5e5, #ffffff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.cta-button {
+    background: #0071e3;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+.cta-button:hover {
+    background: #005bb5;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.content-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+.product {
+    margin-top: 2rem;
+}
+.product h3 {
+    font-size: 1.5rem;
+    color: #0071e3;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
